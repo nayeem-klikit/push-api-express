@@ -30,7 +30,9 @@ webpush.setVapidDetails(
 
 // Create route for allow client to subscribe to push notification.
 app.post("/subscribe", (req, res) => {
+  // Here, need to store the client subscription somehow
   const subscription = req.body;
+
   res.status(201).json({});
   const payload = JSON.stringify({
     title: "Hello World",
